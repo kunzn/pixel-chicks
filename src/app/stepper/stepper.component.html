@@ -1,0 +1,80 @@
+<mat-card class="card" *ngIf="!done">
+  <h1> Welcome to the Pixel Chick's Version of UW Madison's Degree Audit System :) </h1>
+</mat-card>
+
+<mat-card class="card" *ngIf="!done">
+<mat-stepper #stepper>
+    <mat-step [stepControl]="firstFormGroup" errorMessage="Major is required.">
+      <form [formGroup]="firstFormGroup" class="big">
+        <ng-template matStepLabel>Choose Major(s)</ng-template>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Major</mat-label>
+              <mat-chip-list #chipList aria-label="Major selection">
+                <mat-chip
+                  *ngFor="let major of majors"
+                  (removed)="remove(major)">
+                  {{major}}
+                  <button matChipRemove>
+                    <mat-icon>cancel</mat-icon>
+                  </button>
+                </mat-chip>
+              <input type="text"
+                     placeholder="Choose your Major"
+                     aria-label="Major"
+                     matInput
+                     #majorInput
+                     required
+                     [(ngModel)]="major"
+                     [formControl]="myControl"
+                     formControlName="firstCtrl" 
+                     [matAutocomplete]="auto"
+                     [matChipInputFor]="chipList">>
+              </mat-chip-list>
+              <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)='makeChip($event.option.value)'>
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+
+        <div>
+          <p> Select any number of Majors and Certificates to Audit </p>
+          <button mat-raised-button matStepperNext color="primary" >Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Select Classes</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>Classes</mat-label>
+          
+          <input type="text" matInput placeholder="CHEM 103" formControlName="secondCtrl" [matAutocomplete]="auto" [formControl]="myControl2">
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredClasses | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <div>
+          <p>TBD if this will happene</p>
+          <button mat-raised-button matStepperPrevious>Back</button>
+          <button mat-raised-button matStepperNext color="primary">Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-raised-button matStepperPrevious>Back</button>
+        <button mat-raised-button (click)="stepper.reset()">Reset</button>
+        <button mat-raised-button (click)="toggleDone()" color="primary">Run Audit</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+  
+</mat-card>
+
+<app-result *ngIf="done" [majors]="majors"></app-result>
