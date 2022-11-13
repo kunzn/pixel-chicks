@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -8,55 +9,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ResultComponent implements OnInit {
 
   @Input('majors')
-  majors!: any;
+  majors!: String[];
   
   course1: Course = {name:"Calc101", course:"Calculus 1", credits:3};
 
   displayedColumns: string[] = ['course', 'name', 'credits'];
   vis: string[] = ['Course Name', 'Course Number', 'Number Credits'];
 
-  items: Section[] = [
-    {name: 'Math', requirements:  [
-      {name:"Calculus", 
-      courses:[{name:"Calc221", course:"Calculus 1", credits:3}, 
-              {name:"Calc222", course:"Calculus 2", credits:3},
-              {name:"Calc223", course:"Calculus 3", credits:3}]},
-      {name:"Discrete Math", 
-              courses:[{name:"CS240", course:"Discrete Math", credits:3}, ]},
-      {name:"Stats Elective", 
-              courses:[{name:"Stat311", course:"Statistics for Engineers", credits:3}, ]}    
-            ]},
-    {name: 'Science', requirements:  [
-      {name:"Chem", 
-      courses:[{name:"Calc221", course:"Calculus 1", credits:3}, 
-              {name:"Calc222", course:"Calculus 2", credits:3},
-              {name:"Calc223", course:"Calculus 3", credits:3}]},
-      {name:"Comp Sci", 
-              courses:[{name:"CS240", course:"Discrete Math", credits:3}, ]},
-      {name:"Physics", 
-              courses:[{name:"Stat311", course:"Statistics for Engineers", credits:3}, ]}    
-            ]},
-    {name: 'ECE Courses', requirements:  [
-      {name:"Calculus", 
-      courses:[{name:"Calc221", course:"Calculus 1", credits:3}, 
-              {name:"Calc222", course:"Calculus 2", credits:3},
-              {name:"Calc223", course:"Calculus 3", credits:3}]},
-      {name:"Discrete Math", 
-              courses:[{name:"CS240", course:"Discrete Math", credits:3}, ]},
-      {name:"Stats Elective", 
-              courses:[{name:"Stat311", course:"Statistics for Engineers", credits:3}, ]}    
-            ]},
-    {name: 'Advanced Electives', requirements:  [
-      {name:"Calculus", 
-      courses:[{name:"Calc221", course:"Calculus 1", credits:3}, 
-              {name:"Calc222", course:"Calculus 2", credits:3},
-              {name:"Calc223", course:"Calculus 3", credits:3}]},
-      {name:"Discrete Math", 
-              courses:[{name:"CS240", course:"Discrete Math", credits:3}, ]},
-      {name:"Stats Elective", 
-              courses:[{name:"Stat311", course:"Statistics for Engineers", credits:3}, ]}    
-            ]},
-  ];
+  items: Section[] = [];
 
 m1: Major = {name:"Computer Engineering", sections: this.items};
 m2: Major = {name:"Electrical Engineering", sections:[
@@ -73,16 +33,30 @@ m2: Major = {name:"Electrical Engineering", sections:[
         }
 
 sections: Section[] = [];
+allMajors: Major[] = [];
+myMajors: Major[] = [];
+
 
   expandedIndex = 0;
 
   panelOpenState = false;
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    console.log(this.majors);
-    this.combineRequirements([this.m1, this.m2]);
-    console.log(this.sections);
+    this.httpClient.get("../assets/majors-classes.json").subscribe((data: any) =>{
+        console.log(data);
+        
+        this.allMajors = data.majors;
+
+        console.log(this.allMajors);
+        for (var i = 0; i < this.majors.length; i++) {
+                this.myMajors = this.myMajors.concat((this.allMajors.filter(e => e.name == this.majors[i])));    
+                console.log(this.myMajors);
+        }
+        this.combineRequirements(this.myMajors);
+        console.log(this.myMajors);
+        this.items = this.sections;
+      })
   }
 
   myCourses: Course[] = [{name:"Calc221", course:"Calculus 1", credits:3},{name:"CS240", course:"Discrete Math", credits:3}, ];

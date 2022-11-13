@@ -1,0 +1,297 @@
+{
+    "majors": [
+        {
+            "name": "Computer Engineering  (BS) ",
+            "sections": [
+                {
+                    "name": "Math",
+                    "requirements": [
+                        {
+                            "name": "Calculus",
+                            "courses": [
+                                {
+                                    "name": "Calc221",
+                                    "course": "Calculus 1",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "Calc222",
+                                    "course": "Calculus 2",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "Calc223",
+                                    "course": "Calculus 3",
+                                    "credits": 3
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Discrete Math",
+                            "courses": [
+                                {
+                                    "name": "CS240", "course": "Discrete Math",
+                                    "credits": 3
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Stats Elective",
+                            "courses": [
+                                {
+                                    "name": "Stat311",
+                                    "course": "Statistics for Engineers",
+                                    "credits": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Science",
+                    "requirements": [
+                        {
+                            "name": "Chem",
+                            "courses": [
+                                {
+                                    "name": "Calc221",
+                                    "course": "Calculus 1",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "Calc222",
+                                    "course": "Calculus 2",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "Calc223",
+                                    "course": "Calculus 3",
+                                    "credits": 3
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Comp Sci",
+                            "courses": [
+                                {
+                                    "name": "CS240",
+                                    "course": "Discrete Math",
+                                    "credits": 3
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Physics",
+                            "courses": [
+                                {
+                                    "name": "Stat311",
+                                    "course": "Statistics for Engineers",
+                                    "credits": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ECE Courses",
+                    "requirements": [
+                        {
+                            "name": "Calculus",
+                            "courses": [
+                                {
+                                    "name": "Calc221",
+                                    "course": "Calculus 1",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "Calc222",
+                                    "course": "Calculus 2",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "Calc223",
+                                    "course": "Calculus 3",
+                                    "credits": 3
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Discrete Math",
+                            "courses": [
+                                {
+                                    "name": "CS240",
+                                    "course": "Discrete Math",
+                                    "credits": 3
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Stats Elective",
+                            "courses": [
+                                {
+                                    "name": "Stat311",
+                                    "course": "Statistics for Engineers",
+                                    "credits": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Advanced Electives",
+                    "requirements": [
+                        {
+                            "name": "Calculus",
+                            "courses": [
+                                {
+                                    "name": "Calc221",
+                                    "course": "Calculus 1",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "Calc222",
+                                    "course": "Calculus 2",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "Calc223",
+                                    "course": "Calculus 3",
+                                    "credits": 3
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Discrete Math",
+                            "courses": [
+                                {
+                                    "name": "CS240",
+                                    "course": "Discrete Math",
+                                    "credits": 3
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Stats Elective",
+                            "courses": [
+                                {
+                                    "name": "Stat311",
+                                    "course": "Statistics for Engineers",
+                                    "credits": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Computer Sciences  (BS) ",
+            "sections": [
+                {
+                    "name": "Math",
+                    "requirements": [
+                        {
+                            "name": "Calculus",
+                            "courses": [
+                                {
+                                    "name": "Calc221",
+                                    "course": "Calculus 1",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "Calc222",
+                                    "course": "Calculus 2",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "Calc223",
+                                    "course": "Calculus 3",
+                                    "credits": 3
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Discrete Math",
+                            "courses": [
+                                {
+                                    "name": "CS240", "course": "Discrete Math",
+                                    "credits": 3
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Stats Elective",
+                            "courses": [
+                                {
+                                    "name": "Stat311",
+                                    "course": "Statistics for Engineers",
+                                    "credits": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Science",
+                    "requirements": [
+                        {
+                            "name": "Chem",
+                            "courses": [
+                                {
+                                    "name": "Calc221",
+                                    "course": "Calculus 1",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "Calc222",
+                                    "course": "Calculus 2",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "Calc223",
+                                    "course": "Calculus 3",
+                                    "credits": 3
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Comp Sci",
+                            "courses": [
+                                {
+                                    "name": "CS200",
+                                    "course": "Java Fundamentals",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "CS300",
+                                    "course": "Java II",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "CS400",
+                                    "course": "Advanced Java",
+                                    "credits": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Advanced Computer Science Courses",
+                    "requirements": [
+                        {
+                            "name": "Theory of Computer Science",
+                            "courses": [
+                                {
+                                    "name": "Comp Sci 577",
+                                    "course": "Introduction to Algorithms",
+                                    "credits": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
