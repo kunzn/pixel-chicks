@@ -10,19 +10,19 @@
                             "name": "Calculus",
                             "courses": [
                                 {
-                                    "name": "Calc221",
-                                    "course": "Calculus 1",
-                                    "credits": 3
+                                    "name": "MATH 221",
+                                    "course": "Calculus and Analytic Geometry 1",
+                                    "credits": 5
                                 },
                                 {
-                                    "name": "Calc222",
-                                    "course": "Calculus 2",
-                                    "credits": 3
+                                    "name": "MATH 222",
+                                    "course": "Calculus and Analytic Geometry 2",
+                                    "credits": 4
                                 },
                                 {
-                                    "name": "Calc223",
+                                    "name": "Calc234",
                                     "course": "Calculus 3",
-                                    "credits": 3
+                                    "credits": 4
                                 }
                             ]
                         },
@@ -30,7 +30,8 @@
                             "name": "Discrete Math",
                             "courses": [
                                 {
-                                    "name": "CS240", "course": "Discrete Math",
+                                    "name": "CS240",
+                                    "course": "Introduction to Discrete Mathematics",
                                     "credits": 3
                                 }
                             ]
@@ -39,8 +40,8 @@
                             "name": "Stats Elective",
                             "courses": [
                                 {
-                                    "name": "Stat311",
-                                    "course": "Statistics for Engineers",
+                                    "name": "STAT 311",
+                                    "course": "Introduction to Theory and Methods of Mathematical Statistics I",
                                     "credits": 3
                                 }
                             ]
@@ -51,31 +52,16 @@
                     "name": "Science",
                     "requirements": [
                         {
-                            "name": "Chem",
+                            "name": "Computer Science",
                             "courses": [
                                 {
-                                    "name": "Calc221",
-                                    "course": "Calculus 1",
+                                    "name": "COMP SCI 300",
+                                    "course": "Programming II",
                                     "credits": 3
                                 },
                                 {
-                                    "name": "Calc222",
-                                    "course": "Calculus 2",
-                                    "credits": 3
-                                },
-                                {
-                                    "name": "Calc223",
-                                    "course": "Calculus 3",
-                                    "credits": 3
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Comp Sci",
-                            "courses": [
-                                {
-                                    "name": "CS240",
-                                    "course": "Discrete Math",
+                                    "name": "COMP SCI 400",
+                                    "course": "Programming III",
                                     "credits": 3
                                 }
                             ]
@@ -84,9 +70,24 @@
                             "name": "Physics",
                             "courses": [
                                 {
-                                    "name": "Stat311",
-                                    "course": "Statistics for Engineers",
-                                    "credits": 3
+                                    "name": "PHYSICS 201",
+                                    "course": "General Physics",
+                                    "credits": 5
+                                },
+                                {
+                                    "name": "PHYSICS 202",
+                                    "course": "General Physics 2",
+                                    "credits": 5
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Chemistry",
+                            "courses": [
+                                {
+                                    "name": "CHEM 109",
+                                    "course": "Advanced Genral Chemistry",
+                                    "credits": 5
                                 }
                             ]
                         }
@@ -96,41 +97,71 @@
                     "name": "ECE Courses",
                     "requirements": [
                         {
-                            "name": "Calculus",
+                            "name": "ECE",
                             "courses": [
                                 {
-                                    "name": "Calc221",
-                                    "course": "Calculus 1",
+                                    "name": "E C E 203",
+                                    "course": "Signals, Information, and Computation",
                                     "credits": 3
                                 },
                                 {
-                                    "name": "Calc222",
-                                    "course": "Calculus 2",
+                                    "name": "E C E 210",
+                                    "course": "Introductory Experience in Electrical Engineering",
+                                    "credits": 2
+                                },
+                                {
+                                    "name": "E C E 219",
+                                    "course": "Analytical Methods for Electromagnetics Engineering",
+                                    "credits": 2
+                                },
+                                {
+                                    "name": "E C E 220",
+                                    "course": "Electrodynamics I",
                                     "credits": 3
                                 },
                                 {
-                                    "name": "Calc223",
-                                    "course": "Calculus 3",
-                                    "credits": 3
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Discrete Math",
-                            "courses": [
+                                    "name": "E C E 230",
+                                    "course": "Circuit Analysis",
+                                    "credits": 4
+                                },
                                 {
-                                    "name": "CS240",
-                                    "course": "Discrete Math",
+                                    "name": "E C E/​COMP SCI  252",
+                                    "course": "Introduction to Computer Engineering",
                                     "credits": 3
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Stats Elective",
-                            "courses": [
+                                },
                                 {
-                                    "name": "Stat311",
-                                    "course": "Statistics for Engineers",
+                                    "name": "E C E/​COMP SCI  270",
+                                    "course": "Circuits Laboratory I",
+                                    "credits": 1
+                                },
+                                {
+                                    "name": "E C E 315",
+                                    "course": "Introductory Microprocessor Laboratory",
+                                    "credits": 1
+                                },
+                                {
+                                    "name": "E C E 340",
+                                    "course": "Electronic Circuits I",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "E C E/​COMP SCI  352",
+                                    "course": "Digital System Fundamentals",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "E C E 353",
+                                    "course": "Introduction to Microprocessor Systems",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "E C E/​COMP SCI  354",
+                                    "course": "Machine Organization and Programming",
+                                    "credits": 3
+                                },
+                                {
+                                    "name": "E C E 551",
+                                    "course": "Digital System Design and Synthesis",
                                     "credits": 3
                                 }
                             ]
@@ -141,44 +172,64 @@
                     "name": "Advanced Electives",
                     "requirements": [
                         {
-                            "name": "Calculus",
+                            "name": "Electronic Circuits Elective",
                             "courses": [
                                 {
-                                    "name": "Calc221",
-                                    "course": "Calculus 1",
-                                    "credits": 3
-                                },
-                                {
-                                    "name": "Calc222",
-                                    "course": "Calculus 2",
-                                    "credits": 3
-                                },
-                                {
-                                    "name": "Calc223",
-                                    "course": "Calculus 3",
+                                    "name": "E C E 342",
+                                    "course": "Electronic Circuits II",
                                     "credits": 3
                                 }
                             ]
                         },
                         {
-                            "name": "Discrete Math",
+                            "name": "Systems Software Elective",
                             "courses": [
                                 {
-                                    "name": "CS240",
-                                    "course": "Discrete Math",
+                                    "name": "E C E/​COMP SCI  506",
+                                    "course": "Software Engineering",
                                     "credits": 3
                                 }
                             ]
                         },
                         {
-                            "name": "Stats Elective",
+                            "name": "Capstone Design",
                             "courses": [
                                 {
-                                    "name": "Stat311",
-                                    "course": "Statistics for Engineers",
+                                    "name": "E C E 453",
+                                    "course": "Embedded Microprocessor System Design",
+                                    "credits": 4
+                                }
+                            ]
+                        },
+                        {
+                            "name": "CMPE Elective I",
+                            "courses": [
+                                {
+                                    "name": "E C E 537",
+                                    "course": "Communication Networks",
                                     "credits": 3
                                 }
                             ]
+                        },
+                        {
+                            "name": "CMPE Elective II",
+                            "courses": [
+                                {
+                                    "name": "E C E 599",
+                                    "course": "Independent Study",
+                                    "credits": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Stats Elective",
+                    "courses": [
+                        {
+                            "name": "Stat311",
+                            "course": "Statistics for Engineers",
+                            "credits": 3
                         }
                     ]
                 }
@@ -214,7 +265,8 @@
                             "name": "Discrete Math",
                             "courses": [
                                 {
-                                    "name": "CS240", "course": "Discrete Math",
+                                    "name": "CS240",
+                                    "course": "Discrete Math",
                                     "credits": 3
                                 }
                             ]
